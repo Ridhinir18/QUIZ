@@ -14,7 +14,6 @@ load_dotenv()
 router = APIRouter(
     tags=["Question Generation"]
 )
-
 token_security_scheme = APIKeyHeader(name="Token", auto_error=False)
 def JWT_AUTHENTICATION(incoming_token: str = Depends(token_security_scheme)):
     secret_target = JWT_SECRET_KEY 
